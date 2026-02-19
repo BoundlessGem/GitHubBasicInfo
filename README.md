@@ -79,7 +79,7 @@ Merge pull request
 		○ Conflict warning can then be seen on the pull request page by PR author and other collaborators
 			□ Commit can be made in order to resolve this conflict or discuss at PR comments how to do so
 
-----------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 Pre settings before making or cloning any repositories
 	• GitHub  commits by default needs <name> and <email> in order to function
 		○ GitHub checks the user by email. Not by username. 
@@ -104,6 +104,5 @@ Pre settings before making or cloning any repositories
 		□ --force is POWERFUL command on itself. Only use if: It's your personal project / No one else has clones on your 			  repository yet
 			□ git commit --amend --author="username <email>" --no-edit
 			□ git push --force
-----------------------------------------------------------------------------------------------------------------------------
-
+---------------------------------------------------------------------------------------------------------------
 
