@@ -1,6 +1,6 @@
 # GitHubBasicInfo
 Personal understanding of basics and usages of the GitHub
-
+```
 GitHub is cloud-based platform 
 	• Showcase/share your work
 	• Track/manage changes to code overtime
@@ -79,5 +79,34 @@ Merge pull request
 		○ Conflict warning can then be seen on the pull request page by PR author and other collaborators
 			□ Commit can be made in order to resolve this conflict or discuss at PR comments how to do so
 
+```
+---------------------------------------------------------------------------------------------------------------
+```
+Pre settings before making or cloning any repositories
+	• GitHub  commits by default needs <name> and <email> in order to function
+		○ GitHub checks the user by email. Not by username. 
+			□ If local email on upload to repository is different from owner it's seen as different contributor
+		○ By default these are:
+			□ Username: Given name to computer, which could be i.e. "MyName"
+			□ Email: Computer device name, which could be i.e. "Desktop - 8SFSD8D"
+		○ These can bring some really unfortunate mistakes when coding between PC:s
 
+	• In IDE make a Git profile with your own username, but first let's get hidden email address from GitHub
+		○ At GitHub, under settings under  => "Emails" 
+		○ Select "Keep my email address private"
+		○ Under it there is your hidden email address (123456789+name@user.noreply.github.com)
+	
+	• These two can now be changed from IDE settings or with  Gitbash. (Terminal commands)
+		○ IDE: Git => Options/settings => Git Global settings => Set username and Email
+		○ Gitbash: (In "Visual studio"  under View tab. There is Terminal) 
+			□ git config --global user.name "username"
+			□ git config --global user.email "email"
+			
+		□ If you already failed and read this now. This can rewrite all of the commit history under your name to your "new 			  name" from this local device
+		□ --force is POWERFUL command on itself. Only use if: It's your personal project / No one else has clones on your 			  repository yet
+			□ git commit --amend --author="username <email>" --no-edit
+			□ git push --force
+```
+---------------------------------------------------------------------------------------------------------------
+```
 
