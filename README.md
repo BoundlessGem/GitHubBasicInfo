@@ -128,4 +128,68 @@ Pre settings before making or cloning any repositories
 ```
 ---------------------------------------------------------------------------------------------------------------
 ```
+Get files from GitHub [There are three ways to get copy of GitHub repositories].
+	
+	• Clone:  When repository is cloned you get full repository to your local computer
+		○ All branches (main, any other derived branches)
+		○ Every commit ever made on every branch
+		○ Complete history of file changes over time
+			
+	• Download:  In order to save snapshot repository to our local machine
+		○ You just want files as they are at that moment of time
+		○ Not planning to contribute to the project
+		○ Don't need Git or its version control
+		
+	• Fork: Fork creates copy of another account's repository to your account.
+	  Original is called "upstream"
+		○ Fork remains linked to original repository. Forked repository is called "downstream"
+			□ Allows to submit pull request to original author repository on potential fixes
+			□ When original author makes changes on their repository you can sync yours with it
+				
+Upload files to GitHub []
 
+	• Uploading to repositories applies version control to them
+	• Back up your files into the cloud
+	• Files are linked to your personal username and can be shared/shown easily to others
+	  (privately/publicly)
+	
+If files are upload through GitHub portal. Be careful, because it will bypass "gitignore" file
+we made earlier
+	• "gitignore" is made to ignore likes of "bin/", "obj/" and any other build-related files
+		○ If its ignored everything will get upload instead and restriction won't work 
+			□ At upload it tried to add 26 files instead of three items: one folder,
+		      project- and source file.
+			
+	• Genereal thumb rule is not to push straight to "main branch" instead create new branch
+		○ GitHub repository => "main" drop down => "View all branches" => New branch
+		○ Git bash (Terminal) Creates and switches to new branch [I recommend this route]
+			□ ..\repos\username\repositoryName> 
+				□ git checkout -b NewBranchName
+					® Currently this is just new "local" derived branch [Not yet at GitHub]
+	
+	• Open cloned repository In "Visual studio" and under View tab open the Terminal again
+		○ Terminal has to be on that cloned repository location ...\repos\username\repositoryName>
+		○ Always remember check and choose correct branch before push!
+		○ Also copy your additional project to correct Git root before push!!!
+			□ git branch
+				□ Shows your current branch (Always check the branch!!!)
+			□ git checkout -b NewBranchName
+				Creates and switches to new branch (If you didn't create new branch earlier)
+			□ git checkout BranchName
+				□ Switches between branches
+			□ git add YourAnotherProjectFolder/
+				□ This works only when local clone exist from GitHub through Git [We did earlier]
+					® When adding just files  => git add filename.filetype
+			□ git commit -m "Add new project"
+				□ "Commit" stand for itself and "-m" means "added message" [required by GitHub]
+			□ git push --set-upstream origin NewBranchName
+				□ Pushes the commit to the current branch on GitHub
+				□ --set-upstream Creates link between "local" branch and remote branch[GitHub]
+					® i.e. this created local derived branch [git checkout -b NewBranchName]
+				□  origin Means your remote branch i.e. GitHub repository 
+
+Once this is done. 
+	• Check derived branch on you GitHub repository and merge to the main if there are no problems
+
+
+```
