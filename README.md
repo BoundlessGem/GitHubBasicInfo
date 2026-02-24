@@ -192,22 +192,25 @@ Once this is done.
 	• Check derived branch on you GitHub repository and merge to the main if there are no problems
 ```
 ---------------------------------------------------------------------------------------------------------------
+Merge conflict
 ```
-
 In case of any change is made at remote(GitHub) end, then there is real chance that you might
 start making changes on your local "cloned" repository before "pulling" i.e. merging with
 the remote changes.
 	• This will generate problem where next push won't get accepted, because of the differences
       between local !== remote before trying to push even more to remote repository
+
 		○ Cannot pull, because local has uncommitted changes that conflict
           (Changes which doesn't exist on remote)
 			□ Local has to match with remote(before its changes)
+
 		○ Cannot push, because remote has some changes which doesn't exist locally yet
 			□ Remote has to match with local(before its changes)
 
-Another way is to overwrite local file/files with remote ones. This will be work much like
+One way is to overwrite local file/files with remote ones. This will be work much like
 single pull, but this way we can declare which files will be rewritten and we don't have
 to touch on the file which we are working locally.
+
 	• git checkout origin/branchName -- fileName.fileType
 		○ Choose from remote the branch and which file to be overwritten
 	• git commit -m "Something about restoring this file"
@@ -218,6 +221,7 @@ to touch on the file which we are working locally.
 			
 	• Now the merge conflict from [remote => local clone] is solved and they are in sync
 	• We can normally commit new merge from [local clone => remote]
-Both merges are now finished.
+
+	  Both merges are now finished.
 
 ```
